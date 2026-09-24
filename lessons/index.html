@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#080c0a" />
+    <title>Video lessons — Learn With Tan</title>
+    <meta
+      name="description"
+      content="Explore science education video lessons shared by Dr. Tanveer Syed, PhD, covering educational theories, research methods, and related topics."
+    />
+    <link rel="canonical" href="https://learnwithtan.github.io/lessons/" />
+    <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="../assets/css/styles.css" />
+    <script type="module" src="../assets/js/site.js"></script>
+    <script type="module" src="../assets/js/lessons.js"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header container">
+      <a class="brand" href="../" aria-label="Learn With Tan home"
+        ><svg viewBox="0 0 32 32" fill="none" aria-hidden="true">
+          <path
+            d="M16 8C11 5 6 5 2 7v19c5-2 9-1 14 2 5-3 9-4 14-2V7c-4-2-9-2-14 1Z"
+          />
+          <path d="M16 8v20" /></svg
+        >Learn With <span>Tan</span><span class="brand-dot">.</span></a
+      >
+      <nav aria-label="Main navigation">
+        <a href="../#about">About Tan</a><a href="../#support">How I can help</a
+        ><a href="./" aria-current="page"
+          >Video lessons <span aria-hidden="true">↗</span></a
+        >
+      </nav>
+      <a class="header-contact" href="mailto:tanveermansursyed1987@gmail.com"
+        >Let’s connect <span aria-hidden="true">↗</span></a
+      >
+    </header>
+    <main id="main" class="container lessons-main">
+      <section class="library-intro" aria-labelledby="library-title">
+        <a class="breadcrumb" href="../"
+          ><span aria-hidden="true">←</span> Back to home</a
+        >
+        <p class="eyebrow">
+          <span class="status-dot"></span> THE LESSON LIBRARY
+        </p>
+        <h1 id="library-title">
+          A little clarity,<br /><em>at your own pace.</em>
+        </h1>
+        <p>
+          Ideas to explore. Concepts to connect. Video lessons in science<br
+            class="desktop-break"
+          />
+          education, shared by Dr. Tanveer Syed, PhD.
+        </p>
+        <span class="youtube-note"
+          ><svg viewBox="0 0 24 18" aria-hidden="true">
+            <rect x="1" y="1" width="22" height="16" rx="5" />
+            <path d="m10 5 6 4-6 4Z" />
+          </svg>
+          Watch freely on YouTube</span
+        >
+      </section>
+      <section class="library-content" aria-label="Browse lessons">
+        <div class="library-tools">
+          <div class="filters" role="group" aria-label="Filter by topic">
+            <button
+              class="filter-button active"
+              data-category="all"
+              aria-pressed="true"
+              type="button"
+            >
+              All lessons</button
+            ><button
+              class="filter-button"
+              data-category="Educational theories"
+              aria-pressed="false"
+              type="button"
+            >
+              Educational theories</button
+            ><button
+              class="filter-button"
+              data-category="Research methods"
+              aria-pressed="false"
+              type="button"
+            >
+              Research methods</button
+            ><button
+              class="filter-button"
+              data-category="Science education"
+              aria-pressed="false"
+              type="button"
+            >
+              Science education
+            </button>
+          </div>
+          <div class="search-field">
+            <svg viewBox="0 0 20 20" aria-hidden="true">
+              <circle cx="8" cy="8" r="5" />
+              <path d="m12 12 5 5" /></svg
+            ><label class="sr-only" for="lesson-search">Search lessons</label
+            ><input
+              id="lesson-search"
+              type="search"
+              placeholder="Find a lesson…"
+              maxlength="120"
+              autocomplete="off"
+            />
+          </div>
+        </div>
+        <p
+          id="lesson-count"
+          class="lesson-count"
+          role="status"
+          aria-live="polite"
+        >
+          Loading the lesson library…
+        </p>
+        <div id="lesson-grid" class="video-grid"></div>
+        <div id="library-empty" class="library-empty" hidden>
+          <div class="empty-icon" aria-hidden="true">
+            <svg viewBox="0 0 48 48">
+              <rect x="5" y="9" width="38" height="29" rx="4" />
+              <path d="m20 17 11 7-11 7Z" />
+            </svg>
+          </div>
+          <p class="eyebrow" id="empty-eyebrow">
+            GOOD THINGS TAKE A LITTLE CURIOSITY
+          </p>
+          <h2 id="empty-title">The next chapter is on its way.</h2>
+          <p id="empty-description">
+            New video lessons will be shared here. Until then, bring your
+            questions<br class="desktop-break" />
+            to a one-on-one consulting or tutoring session.
+          </p>
+          <a
+            id="empty-contact"
+            class="text-link"
+            href="mailto:tanveermansursyed1987@gmail.com"
+            >Let’s learn together <span aria-hidden="true">↗</span></a
+          ><button
+            id="reset-filters"
+            class="button button-secondary"
+            type="button"
+            hidden
+          >
+            Clear filters</button
+          ><button
+            id="retry-lessons"
+            class="button button-secondary"
+            type="button"
+            hidden
+          >
+            Try again
+          </button>
+        </div>
+        <noscript
+          ><p class="notice">
+            Please enable JavaScript to browse the video library. You can also
+            <a href="mailto:tanveermansursyed1987@gmail.com">email Tan</a> for
+            lesson links.
+          </p></noscript
+        >
+      </section>
+      <section class="library-help">
+        <div>
+          <h2>A question deserves <em>a conversation.</em></h2>
+          <p>Go a little deeper with one-on-one consulting and tutoring.</p>
+        </div>
+        <a
+          class="button button-primary"
+          href="mailto:tanveermansursyed1987@gmail.com"
+          >Get in touch <span aria-hidden="true">↗</span></a
+        >
+      </section>
+    </main>
+    <footer class="site-footer container">
+      <div>
+        <a class="footer-brand" href="../">Learn With Tan<span>.</span></a>
+        <p>A space for curiosity. A path to understanding.</p>
+      </div>
+      <p>
+        © <span data-year>2026</span> Learn With Tan<br /><span
+          >Dr. Tanveer Syed, PhD</span
+        >
+      </p>
+      <a class="back-top" href="../"
+        >Back to home <span aria-hidden="true">↗</span></a
+      >
+    </footer>
+  </body>
+</html>

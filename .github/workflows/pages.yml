@@ -1,0 +1,50 @@
+name: Deploy Learn With Tan
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: github-pages
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Check out site
+        uses: actions/checkout@v6
+
+      - name: Check lesson publishing and catalog
+        run: |
+          node --test
+          node --input-type=module -e "import { readFileSync } from 'node:fs'; import { normalizeVideos } from './assets/js/youtube.js'; normalizeVideos(JSON.parse(readFileSync('data/videos.json', 'utf8')));"
+
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v5
+
+      - name: Collect public site files
+        shell: bash
+        run: |
+          mkdir -p _site
+          cp index.html 404.html robots.txt sitemap.xml .nojekyll _site/
+          cp -R lessons admin assets data _site/
+
+      - name: Upload site
+        uses: actions/upload-pages-artifact@v5
+        with:
+          path: _site
+          include-hidden-files: true
+
+      - name: Publish to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

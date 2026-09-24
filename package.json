@@ -1,0 +1,15 @@
+{
+  "name": "learn-with-tan",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Science education consulting and video lessons with Dr. Tanveer Syed, PhD.",
+  "scripts": {
+    "start": "node scripts/serve.mjs",
+    "dev": "node scripts/serve.mjs",
+    "test": "node --test"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}

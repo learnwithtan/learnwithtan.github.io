@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex, nofollow" />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+    <meta name="color-scheme" content="dark" />
+    <title>Lesson studio · Learn With Tan</title>
+    <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="../assets/css/styles.css" />
+    <link rel="stylesheet" href="../assets/css/admin.css" />
+    <script type="module" src="../assets/js/admin.js"></script>
+  </head>
+  <body class="admin-page">
+    <a class="skip-link" href="#main-content">Skip to content</a>
+    <header class="studio-header">
+      <a class="studio-brand" href="../"
+        >Learn With Tan<span>LESSON STUDIO</span></a
+      >
+      <a class="studio-back" href="../lessons/"
+        >View video lessons <span aria-hidden="true">↗</span></a
+      >
+    </header>
+    <main id="main-content" class="studio-main">
+      <section
+        id="gate-panel"
+        class="studio-gate"
+        aria-labelledby="gate-heading"
+      >
+        <p class="studio-eyebrow">FOR THE EDUCATOR</p>
+        <h1 id="gate-heading">A little space<br />to share knowledge.</h1>
+        <p class="studio-intro">Sign in to add your next video lesson.</p>
+        <form id="gate-form" class="studio-card" autocomplete="off">
+          <label for="admin-password">Studio password</label>
+          <input
+            id="admin-password"
+            name="admin-password"
+            type="password"
+            required
+            autocomplete="off"
+            spellcheck="false"
+            aria-describedby="gate-note gate-status"
+          />
+          <button class="studio-button" type="submit">
+            Enter the studio <span aria-hidden="true">↗</span>
+          </button>
+          <p
+            id="gate-status"
+            class="studio-status"
+            role="status"
+            aria-live="polite"
+          ></p>
+          <p id="gate-note" class="studio-note">
+            The studio password is a simple access screen. A GitHub token is
+            required to publish changes.
+          </p>
+        </form>
+        <noscript
+          ><p class="studio-status">
+            Enable JavaScript to use the lesson studio.
+          </p></noscript
+        >
+      </section>
+
+      <section id="editor-panel" hidden aria-labelledby="editor-heading">
+        <div class="studio-heading-row">
+          <div>
+            <p class="studio-eyebrow">LESSON STUDIO</p>
+            <h1 id="editor-heading" tabindex="-1">Share your next lesson.</h1>
+          </div>
+          <button id="sign-out" class="studio-text-button" type="button">
+            Sign out
+          </button>
+        </div>
+        <p class="studio-intro">Add a YouTube video to your lesson library.</p>
+        <form id="video-form" autocomplete="off">
+          <div class="studio-grid">
+            <div class="studio-card studio-fields">
+              <div class="studio-field">
+                <label for="video-url"
+                  >YouTube link <span aria-hidden="true">*</span></label
+                ><input
+                  id="video-url"
+                  name="video-url"
+                  type="text"
+                  inputmode="url"
+                  required
+                  placeholder="https://www.youtube.com/watch?v=…"
+                  autocomplete="off"
+                  aria-describedby="url-help"
+                />
+                <p id="url-help" class="studio-note">
+                  Paste a link to a video, Short, or recorded livestream.
+                </p>
+              </div>
+              <div class="studio-field">
+                <label for="video-title"
+                  >Lesson title <span aria-hidden="true">*</span></label
+                ><input
+                  id="video-title"
+                  name="video-title"
+                  type="text"
+                  required
+                  maxlength="140"
+                  placeholder="Give your lesson a clear title"
+                />
+              </div>
+              <div class="studio-field">
+                <label for="video-category"
+                  >Subject area <span aria-hidden="true">*</span></label
+                ><select
+                  id="video-category"
+                  name="video-category"
+                  required
+                ></select>
+              </div>
+              <div class="studio-field">
+                <label for="video-description"
+                  >Short description
+                  <span class="studio-optional">Optional</span></label
+                ><textarea
+                  id="video-description"
+                  name="video-description"
+                  rows="4"
+                  maxlength="2000"
+                  placeholder="What will learners take away?"
+                ></textarea>
+              </div>
+            </div>
+            <aside
+              class="studio-preview-column"
+              aria-labelledby="preview-heading"
+            >
+              <p id="preview-heading" class="studio-eyebrow">LESSON PREVIEW</p>
+              <div class="studio-preview">
+                <div class="studio-thumbnail">
+                  <div id="preview-placeholder">
+                    <span class="studio-play" aria-hidden="true">▷</span
+                    ><span>Your video will appear here</span>
+                  </div>
+                  <img
+                    id="preview-image"
+                    alt="YouTube video thumbnail"
+                    hidden
+                  />
+                </div>
+                <div class="studio-preview-copy">
+                  <p id="preview-category" class="studio-eyebrow"></p>
+                  <h2 id="preview-title">Your next lesson</h2>
+                  <p id="preview-description">
+                    A new idea. A clearer understanding.
+                  </p>
+                </div>
+              </div>
+              <p class="studio-note">
+                Preview the thumbnail, then check that your video is public or
+                unlisted on YouTube.
+              </p>
+            </aside>
+          </div>
+          <div class="studio-card studio-publishing">
+            <div class="studio-field">
+              <label for="github-token"
+                >GitHub publishing token
+                <span aria-hidden="true">*</span></label
+              ><input
+                id="github-token"
+                name="github-token"
+                type="password"
+                required
+                autocomplete="off"
+                spellcheck="false"
+                aria-describedby="token-help"
+              />
+              <p id="token-help" class="studio-note">
+                Use a fine-grained token for this website’s repository with
+                Contents: read and write permission. It stays only in this
+                page’s memory and is cleared when you sign out or leave.
+              </p>
+            </div>
+            <div class="studio-submit-row">
+              <p class="studio-note">
+                Your lesson will go live after GitHub finishes deploying the
+                site.
+              </p>
+              <button id="publish-button" class="studio-button" type="submit">
+                Add video <span aria-hidden="true">↗</span>
+              </button>
+            </div>
+            <p
+              id="publish-status"
+              class="studio-status"
+              role="status"
+              aria-live="polite"
+              aria-atomic="true"
+            ></p>
+          </div>
+        </form>
+      </section>
+    </main>
+    <footer class="studio-footer">
+      <span>Learn With Tan</span><span>One lesson. A new perspective.</span>
+    </footer>
+  </body>
+</html>
