@@ -51,7 +51,7 @@ Use `main` for both the configuration and deployment workflow. If you rename the
 
 ## Add a video lesson
 
-No lesson URLs have been supplied, so the initial library is empty.
+The library includes [Classical conditioning basics](https://www.youtube.com/watch?v=y0K4DWL0WkE), shared by Dr. Tanveer Syed, under **Educational theories**. Follow the steps below to add more lessons.
 
 1. Create a [GitHub fine-grained personal access token](https://github.com/settings/personal-access-tokens/new) while signed in to an account that can write to the site repository. Select **Resource owner → learnwithtan**, set a suitable expiration, select **Only select repositories → learnwithtan.github.io**, and grant **Repository permissions → Contents: Read and write**. No Actions, Administration, or Workflows permission is needed to add lessons. Organization policies may require approval.
 2. Open `https://learnwithtan.github.io/admin/` directly. The public navigation does not link to it, and the page asks search engines not to index it.

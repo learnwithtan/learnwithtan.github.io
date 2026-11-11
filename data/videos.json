@@ -1,3 +1,11 @@
 {
-  "videos": []
+  "videos": [
+    {
+      "id": "y0K4DWL0WkE",
+      "title": "Classical conditioning basics",
+      "description": "An introduction to classical conditioning with Dr. Tanveer Syed.",
+      "category": "Educational theories",
+      "addedAt": "2026-11-11T05:16:29.327Z"
+    }
+  ]
 }
